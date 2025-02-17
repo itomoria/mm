@@ -11,7 +11,7 @@
   body {
     /* Combine background color + background image here */
     background: var(--background-color)
-                url('images/ccf54b_6463e6314a324adb87597c79d11da5a2~mv2.jpg')
+                url('ccf54b_6463e6314a324adb87597c79d11da5a2~mv2.jpg')
                 no-repeat center center fixed;
     background-size: cover;
   
