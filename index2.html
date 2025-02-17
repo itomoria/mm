@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dish Management</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+  <!-- Admin Login Button -->
+  <button id="adminButton" class="admin-btn">Admin Login</button>
+
+  <!-- Login Modal -->
+  <div id="loginModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h3>Admin Login</h3>
+      <input type="text" id="username" placeholder="Username">
+      <input type="password" id="password" placeholder="Password">
+      <button onclick="checkLogin()">Login</button>
+    </div>
+  </div>
+
+  <!-- Search Section -->
+  <div class="search-container">
+    <h4>Search Dishes</h4>
+    <input type="text" id="searchInput" placeholder="Search for dishes...">
+    <div id="resultsDiv" class="results-container"></div>
+  </div>
+
+  <!-- Hidden Admin Section -->
+  <div id="adminSection" style="display: none;">
+    <div class="container">
+      <form method="post" action="https://script.google.com/macros/s/AKfycbya4d1Fwzla5h_Zkd0N_sbGKFgMaMKM4XpUbwZG4xslcWz5eJR28Puq05NiGO0AW7vf/exec" name="contact-form">
+        <h4>Add Dish</h4>
+        
+        <!-- Category and Dish Name -->
+        <select name="Recipe" required>
+          <option value="" disabled selected>食譜 (Recipe)</option>
+          <option value="Y">Yes</option>
+          <option value="N">No</option>
+          <option value="N/A">N/A</option>
+        </select>
+        <input type="text" name="Category" placeholder="Category (e.g., Starter, Main)" required>
+        <input type="text" name="ProductID" placeholder="Product ID (e.g., A1001)" required>
+        <input type="text" name="English" placeholder="Dish Name (e.g., Chicken Tikka Masala)" required>
+        <input type="text" name="Chinese" placeholder="中文 (e.g., 雞肉鬆)" required>
+
+        <!-- Dropdowns for Yes/No/N/A -->
+        <select name="Vegetarian" required>
+          <option value="" disabled selected>Vegetarian</option>
+          <option value="Yes">Yes</option>
+          <option value="No">No</option>
+          <option value="N/A">N/A</option>
+        </select>
+        
+        <select name="Vegan" required>
+          <option value="" disabled selected>Vegan</option>
+          <option value="Yes">Yes</option>
+          <option value="No">No</option>
+          <option value="N/A">N/A</option>
+        </select>
+        
+        <select name="Halal" required>
+          <option value="" disabled selected>Halal</option>
+          <option value="Yes">Yes</option>
+          <option value="No">No</option>
+          <option value="N/A">N/A</option>
+        </select>
+        
+        <select name="Eggs" required>
+          <option value="" disabled selected>Contains Eggs</option>
+          <option value="Yes">Yes</option>
+          <option value="No">No</option>
+          <option value="N/A">N/A</option>
+        </select>
+        
+        <!-- Additional Allergens -->
+        <select name="Mustard" required>
+          <option value="" disabled selected>Contains Mustard</option>
+          <option value="Yes">Yes</option>
+          <option value="No">No</option>
+          <option value="N/A">N/A</option>
+        </select>
+        
+        <select name="Soyabeans" required>
+          <option value="" disabled selected>Contains Soyabeans</option>
+          <option value="Yes">Yes</option>
+          <option value="No">No</option>
+          <option value="N/A">N/A</option>
+        </select>
+        
+        <select name="Sesame" required>
+          <option value="" disabled selected>Contains Sesame</option>
+          <option value="Yes">Yes</option>
+          <option value="No">No</option>
+          <option value="N/A">N/A</option>
+        </select>
+        
+        <select name="Celery" required>
+          <option value="" disabled selected>Contains Celery</option>
+          <option value="Yes">Yes</option>
+          <option value="No">No</option>
+          <option value="N/A">N/A</option>
+        </select>
+        
+        <select name="Peanuts" required>
+          <option value="" disabled selected>Contains Peanuts</option>
+          <option value="Yes">Yes</option>
+          <option value="No">No</option>
+          <option value="N/A">N/A</option>
+        </select>
+        
+        <select name="Nuts" required>
+          <option value="" disabled selected>Contains Nuts</option>
+          <option value="Yes">Yes</option>
+          <option value="No">No</option>
+          <option value="N/A">N/A</option>
+        </select>
+        
+        <select name="Lupin" required>
+          <option value="" disabled selected>Contains Lupin</option>
+          <option value="Yes">Yes</option>
+          <option value="No">No</option>
+          <option value="N/A">N/A</option>
+        </select>
+        
+        <select name="Milk" required>
+          <option value="" disabled selected>Contains Milk</option>
+          <option value="Yes">Yes</option>
+          <option value="No">No</option>
+          <option value="N/A">N/A</option>
+        </select>
+        
+        <select name="Fish" required>
+          <option value="" disabled selected>Contains Fish</option>
+          <option value="Yes">Yes</option>
+          <option value="No">No</option>
+          <option value="N/A">N/A</option>
+        </select>
+        
+        <select name="Molluscs" required>
+          <option value="" disabled selected>Contains Molluscs</option>
+          <option value="Yes">Yes</option>
+          <option value="No">No</option>
+          <option value="N/A">N/A</option>
+        </select>
+        
+        <select name="Crustaceans" required>
+          <option value="" disabled selected>Contains Crustaceans</option>
+          <option value="Yes">Yes</option>
+          <option value="No">No</option>
+          <option value="N/A">N/A</option>
+        </select>
+        
+        <select name="Cereals containing gluten" required>
+          <option value="" disabled selected>Contains Cereals with Gluten</option>
+          <option value="Yes">Yes</option>
+          <option value="No">No</option>
+          <option value="N/A">N/A</option>
+        </select>
+        
+        <select name="Sulphites" required>
+          <option value="" disabled selected>Contains Sulphites</option>
+          <option value="Yes">Yes</option>
+          <option value="No">No</option>
+          <option value="N/A">N/A</option>
+        </select>
+        
+        <!-- Submit Button -->
+        <input type="submit" value="Submit" id="submit">
+      </form>
+    </div>
+  </div>
+
+  <script src="script2.js"></script>
+</body>
+</html>
