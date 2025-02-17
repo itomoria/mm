@@ -1,4 +1,4 @@
-const scriptURL = 'https://script.google.com/macros/s/AKfycbya4d1Fwzla5h_Zkd0N_sbGKFgMaMKM4XpUbwZG4xslcWz5eJR28Puq05NiGO0AW7vf/exec';
+const scriptURL = 'https://script.google.com/macros/s/AKfycbxfWdU84SgK3CeuGiRkMDFLzBBn24e0SHRGq_RlyidPHM1zNFpAkqzvGHdhzPse7dg/exec';
 const form = document.forms['contact-form'];
 let dishes = [];
 
@@ -49,8 +49,10 @@ document.getElementById('searchInput').addEventListener('input', (e) => {
 
   if (searchTerm.length < 2) return;
 
+  // Search by English OR ProductID
   const filteredDishes = dishes.filter(dish => 
-    dish.English.toLowerCase().includes(searchTerm)
+    dish.English.toLowerCase().includes(searchTerm) ||
+    dish.ProductID.toLowerCase().includes(searchTerm)
   );
 
   if (filteredDishes.length === 0) {
@@ -63,9 +65,11 @@ document.getElementById('searchInput').addEventListener('input', (e) => {
     card.className = 'allergy-card';
     card.innerHTML = `
       <h3>${dish.English}</h3>
-      <div class="category">${dish.Category}</div>
+      <div class="category">Category: ${dish.Category}</div>
+      <!-- Optionally show Product ID here -->
+      <div class="category">Product ID: ${dish.ProductID}</div>
       ${Object.entries(dish)
-        .filter(([key]) => !['Category', 'English'].includes(key))
+        .filter(([key]) => !['Category','English','ProductID'].includes(key))
         .map(([key, value]) => `
           <div class="allergy-item">
             <span>${key}:</span>
