@@ -48,8 +48,8 @@ body {
   
   .results-container {
     max-height: 400px;
+    color: #333;
     overflow-y: auto;
-    color: black;
     margin-top: 10px;
   }
   
