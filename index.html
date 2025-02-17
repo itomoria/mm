@@ -2,11 +2,43 @@
 <html>
 <head>
   <title>Dish Management</title>
+  <!-- Make the page responsive on mobile devices -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+  
+  <!-- Your External CSS -->
   <link rel="stylesheet" href="style2.css">
 </head>
 <body>
-  <!-- Admin Login Button -->
+
+  <!-- Black Bar at the Top -->
+  <div class="header-bar">
+    <!-- Logo on the left -->
+    <img 
+      src="images/MM-Logo.avif" 
+      alt="Ming Moon Logo" 
+      class="header-logo"
+    >
+  
+    <!-- Title image + subheading on the right (or below on mobile) -->
+    <div class="header-text">
+      <img 
+        src="images/MING-MOON-neon-font.avif" 
+        alt="Ming Moon Title" 
+        class="main-title-img"
+      >
+      <h2 class="sub-title">Ming Moon Allergen Table</h2>
+    </div>
+  </div>
+  
+  
+  
+  <!-- Subheading Below the Black Bar -->
+  
+
+  <!-- Admin Login Button (fixed at top-right by CSS) -->
   <button id="adminButton" class="admin-btn">Admin Login</button>
 
   <!-- Login Modal -->
@@ -20,17 +52,17 @@
     </div>
   </div>
 
-  <!-- Search Section -->
+  <!-- Search Section (Below the headings) -->
   <div class="search-container">
     <h4>Search Dishes</h4>
-    <input type="text" id="searchInput" placeholder="Search for dishes...">
+    <input type="text" id="searchInput" placeholder="Search for dishes or Product IDs...">
     <div id="resultsDiv" class="results-container"></div>
   </div>
 
   <!-- Hidden Admin Section -->
   <div id="adminSection" style="display: none;">
     <div class="container">
-      <form method="post" action="https://script.google.com/macros/s/AKfycbya4d1Fwzla5h_Zkd0N_sbGKFgMaMKM4XpUbwZG4xslcWz5eJR28Puq05NiGO0AW7vf/exec" name="contact-form">
+      <form method="post" action="https://script.google.com/macros/s/AKfycbxfWdU84SgK3CeuGiRkMDFLzBBn24e0SHRGq_RlyidPHM1zNFpAkqzvGHdhzPse7dg/exec" name="contact-form">
         <h4>Add Dish</h4>
         
         <!-- Category and Dish Name -->
@@ -172,6 +204,7 @@
     </div>
   </div>
 
+  <!-- Your JavaScript -->
   <script src="script2.js"></script>
 </body>
 </html>
