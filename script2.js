@@ -3,7 +3,7 @@ const form = document.forms['contact-form'];
 let dishes = [];
 
 // Admin Login System
-const ADMIN_CREDS = { username: "MingMoon2025", password: "MMTest20" };
+const ADMIN_CREDS = { username: "mmbadmin!", password: "250218mmbadmin!" };
 const adminButton = document.getElementById('adminButton');
 const loginModal = document.getElementById('loginModal');
 const adminSection = document.getElementById('adminSection');
