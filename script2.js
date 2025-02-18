@@ -1,4 +1,4 @@
-const scriptURL = 'https://script.google.com/macros/s/AKfycbxfWdU84SgK3CeuGiRkMDFLzBBn24e0SHRGq_RlyidPHM1zNFpAkqzvGHdhzPse7dg/exec';
+const scriptURL = 'https://script.google.com/macros/s/AKfycbxocEYaBGwUsUMSqxj_URtvl50y-Wlq1bJ-xS92HR18BmgVs9GP22Wdvq8Z8MfofxmI/exec';
 const form = document.forms['contact-form'];
 let dishes = [];
 
