@@ -17,7 +17,7 @@
   <div class="header-bar">
     <!-- Logo on the left -->
     <img 
-      src="MM-Logo.avif" 
+      src="images/MM-Logo.avif" 
       alt="Ming Moon Logo" 
       class="header-logo"
     >
@@ -25,18 +25,13 @@
     <!-- Title image + subheading on the right (or below on mobile) -->
     <div class="header-text">
       <img 
-        src="MING-MOON-neon-font.avif" 
+        src="images/MING-MOON-neon-font.avif" 
         alt="Ming Moon Title" 
         class="main-title-img"
       >
       <h2 class="sub-title">Ming Moon Allergen Table</h2>
     </div>
   </div>
-  
-  
-  
-  <!-- Subheading Below the Black Bar -->
-  
 
   <!-- Admin Login Button (fixed at top-right by CSS) -->
   <button id="adminButton" class="admin-btn">Admin Login</button>
@@ -61,8 +56,23 @@
 
   <!-- Hidden Admin Section -->
   <div id="adminSection" style="display: none;">
+    
+    <!-- CHANGE CREDENTIALS BUTTON & MODAL -->
+    <button id="changeCredsBtn">Change Username/Password</button>
+    <div id="changeCredsModal" class="modal" style="display: none;">
+      <div class="modal-content">
+        <span id="closeChangeCreds" class="close">&times;</span>
+        <h3>Change Admin Credentials</h3>
+        <input type="password" id="oldPassword" placeholder="Current Password">
+        <input type="text" id="newUsername" placeholder="New Username">
+        <input type="password" id="newPassword" placeholder="New Password">
+        <button onclick="updateAdminCreds()">Update</button>
+      </div>
+    </div>
+    <!-- END CHANGE CREDENTIALS MODAL -->
+
     <div class="container">
-      <form method="post" action="https://script.google.com/macros/s/AKfycbxocEYaBGwUsUMSqxj_URtvl50y-Wlq1bJ-xS92HR18BmgVs9GP22Wdvq8Z8MfofxmI/exec" name="contact-form">
+      <form method="post" action="https://script.google.com/macros/s/AKfycbzb1ZH1MV9VV7pwifJc9iAO2NQQ_KPCbv_j78gBp1OJQhtbw3756uRENQF-WmjFR7TC/exec" name="contact-form">
         <h4>Add Dish</h4>
         
         <!-- Category and Dish Name -->
